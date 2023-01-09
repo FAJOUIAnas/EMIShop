@@ -1,0 +1,38 @@
+<body>
+<div class="container">
+  <div class="card">
+    <div class="container-fliud">
+      <div class="wrapper row">
+        <div class="preview col-md-6">
+
+          <div class="preview-pic tab-content">
+            <div class="tab-pane active"><img src="{{product.thumbnail}}" /></div>
+          </div>
+          <ul class="preview-thumbnail nav nav-tabs">
+            <li *ngFor="let image of product.images;">
+              <a data-toggle="tab"><img src="{{image}}" /></a>
+            </li>
+          </ul>
+
+        </div>
+        <div class="details col-md-6">
+          <h3 class="product-title">{{product.title}}</h3>
+          <p class="product-description">{{product.description}}</p>
+          <h4 class="price">current price: <span>{{product.price}}$</span></h4>
+          <p class="vote">
+            <strong>Rating</strong>
+              {{product.rating}}
+            <strong>(87 votes)</strong>
+          </p>
+          <h5 class="sizes">Brand:
+            <span class="size" data-toggle="tooltip" title="small">{{product.brand}}</span>
+          </h5>
+          <div class="action">
+            <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

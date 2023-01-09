@@ -1,0 +1,8 @@
+<form class="d-flex testo">
+  <input type="search" (ngModelChange)="searchProducts(key.value)" #key="ngModel" ngModel
+         name="key" id="searchName" class="form-control mr-sm-2 test" placeholder="Search products..." required>
+</form>
+
+<ul class="row row-cols-4">
+  <app-product-item *ngFor="let elt of products;" [product]="elt"></app-product-item>
+</ul>

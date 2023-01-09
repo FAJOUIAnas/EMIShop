@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 18rem; margin-top: 2.5rem;">
+    <img src="{{product.thumbnail}}" (click)="clickProduct(product.id)" class="card-img-top" alt="...">
+    <div class="card-body">
+      <div class="d-flex justify-content-between">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">${{product.price}}</p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-primary w-50" [disabled]="clicked" (click)="addToCart(); clicked = true;">Add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
