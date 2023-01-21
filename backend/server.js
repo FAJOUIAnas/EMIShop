@@ -3,7 +3,7 @@ const express = require('express')
 const path = require('path')
 
 const PORT = process.env.PORT || 80;
-const HOST = process.env.Host;
+const HOST = process.env.HOST;
 
 const app = express()
 
